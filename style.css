@@ -1,0 +1,188 @@
+body {
+    background: url(pictures/back.gif) rgb(81, 109, 109);
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.header {
+    width: 420px;
+    min-width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    
+    border: 3px solid aqua;
+    border-radius: 2em;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 30px aqua;
+}
+
+.img {
+    width: 10em;
+    height: 10em;
+    border-radius: 5.6em;
+    border: aqua solid 2px;
+    user-select: none;
+    pointer-events: none;
+    box-shadow: 0px 0px 20px aqua;
+}
+
+.mar {
+    margin-top: 17px;
+}
+
+.aaa {
+    padding-bottom: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 10px aqua;
+}
+
+.links {
+    user-select: none;
+    padding: 25px 0px 0px 0px;
+}
+
+.name {
+    padding: 40px 0px 20px 0px;
+    height: 50%;
+    left: 50%;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: white;
+    user-select: none;
+    pointer-events: none;
+}
+
+.links a {
+    background-color: rgba(0, 0, 0, 0.081);
+    padding: 11px;
+    border-radius: 0.5em;
+    border: 1px solid aqua;
+    text-align: center;
+    display: inline-table;
+    margin: 0px 5px 0px 5px;
+
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.ff {
+    width: 150px;
+}
+
+.l {
+    padding: 20px 0px 70px 0px;
+    width: 80%;
+}
+
+.pp {
+    width: 89.5%;
+}
+
+.links a:hover {
+    text-shadow: -1px -1px 1px aqua;
+    box-shadow: inset 1px 1px 0px aqua, inset -1px -1px 0px aqua;
+    transition: all .1s;
+    color: aqua;
+}
+
+.links a:active {
+    color: white;
+}
+
+.glitch {
+    user-select: none;
+    pointer-events: none;
+}
+
+.heh {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: white;
+    pointer-events: none;
+    user-select: none;
+}
+
+.projects {
+    padding: 30px 0px 20px 0px;
+}
+
+.pr {
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+@media screen and (max-device-width: 1080px) {
+    body {
+        background: rgb(81, 109, 109);
+        zoom: 75%;
+    }
+    .header {
+        width: 400px;
+        min-width: 400px;
+    }
+}
+
+/*____________ Audio ____________*/
+
+#controls {
+    position: absolute;
+    user-select: none;
+    top: 255px;
+}
+
+button {
+    outline: none;
+    border: 0;
+    border-radius: .3em;
+    background: transparent;
+    height: 30px;
+    color: white;
+    transition: all .2s ease-out;
+    margin-top: 10px;
+    padding: 0px 8px 0px 8px;
+}
+
+button:hover {
+    color: aqua;
+    box-shadow: inset 0px 0px 4px aqua;
+}
+button:active {
+    color: white;
+    box-shadow: 0px 0px 4px aqua;
+}
+
+.pause {
+    margin: 0px 0px 0px 240px;
+}
+
+.time {
+    position: absolute;
+    width: 0px;
+    height: 3px;
+    background-color: aqua;
+    box-shadow: 0px 0px 5px aqua;
+}
+
