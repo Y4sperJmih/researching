@@ -136,7 +136,8 @@ body {
 
 @media screen and (max-device-width: 1080px) {
     body {
-        background: rgb(81, 109, 109);
+        background-repeat: repeat;
+        background-size: cover;
         zoom: 75%;
     }
     .header {
