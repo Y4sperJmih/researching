@@ -8,7 +8,7 @@ let audtr = 1;
 
 btnPlay.addEventListener("click", function() {
     if (count % 2 != 0) {
-        if (audtr < 6) {
+        if (audtr < 7) {
             audtr++;
         } else {
             audtr = 1;
