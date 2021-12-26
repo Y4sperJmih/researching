@@ -204,7 +204,7 @@ button:active {
     position: absolute;
     width: 34%;
     
-    transform: translate(-208px, -282px) scaleX(-1) rotate(33deg);
+    transform: translate(-208px, -277px) scaleX(-1) rotate(33deg);
 
     z-index: 40;
     user-select: none;
