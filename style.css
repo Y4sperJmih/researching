@@ -197,3 +197,16 @@ button:active {
         background-position: unset;
     }
 }
+
+/*_____________ HappyNewYear ____________*/
+
+.santa {
+    position: absolute;
+    width: 34%;
+    
+    transform: translate(-208px, -282px) scaleX(-1) rotate(33deg);
+
+    z-index: 40;
+    user-select: none;
+    pointer-events: none;
+}
