@@ -1,6 +1,6 @@
 body {
     background: url(pictures/back.gif) rgb(81, 109, 109);
-    margin: 0;
+    margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,6 +22,7 @@ body {
     transform: translateX(-50%) translateY(-50%);
     top: 50%;
     left: 50%;
+    z-index: 6;
     
     border: 3px solid aqua;
     border-radius: 2em;
@@ -40,10 +41,10 @@ body {
 }
 
 .mar {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
-.aaa {
+.ava {
     padding-bottom: 30px;
 }
 
@@ -173,7 +174,7 @@ button:active {
     width: 0px;
     height: 3px;
     background-color: aqua;
-    box-shadow: 0px 0px 5px aqua;
+    box-shadow: 0px 0px 5px #00ffff;
 }
 
 /*_____________ HappyNewYear ____________*/
@@ -182,12 +183,22 @@ button:active {
     position: absolute;
     width: 34%;
     
-    transform: translate(-208px, -277px) scaleX(-1) rotate(33deg);
+    transform: translate(-208px, -282px) scaleX(-1) rotate(33deg);
 
-    z-index: 40;
+    z-index: 6;
     user-select: none;
     pointer-events: none;
 }
+
+#particles-js{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    overflow: hidden;
+  }
 
 /*____________ Media ____________*/
 
@@ -202,7 +213,7 @@ button:active {
         min-width: 400px;
     }
     .santa {
-        transform: translate(-197.6px, -281.5px) scaleX(-1) rotate(33deg);
+        transform: translate(-197.6px, -282px) scaleX(-1) rotate(33deg);
     }
 }
 
@@ -213,3 +224,4 @@ button:active {
         background-position: unset;
     }
 }
+
