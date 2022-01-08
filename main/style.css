@@ -1,0 +1,230 @@
+body {
+    background: url(pictures/back.gif) rgb(81, 109, 109);
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.preloader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 1488;
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+.preloader-circle {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    border: 6px solid transparent;
+    border-top: 6px solid #1df0ff;
+    border-radius: 100%;
+    -webkit-animation: preloader .5s linear infinite;
+    animation: preloader .5s linear infinite;
+}
+
+@-webkit-keyframes preloader {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+  
+@keyframes preloader {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+  
+.preloader.loaded {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header {
+    width: 420px;
+    min-width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    z-index: 6;
+    
+    border: 3px solid aqua;
+    border-radius: 2em;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 30px aqua;
+}
+
+.img {
+    width: 10em;
+    height: 10em;
+    border-radius: 5.6em;
+    border: aqua solid 2px;
+    user-select: none;
+    pointer-events: none;
+    box-shadow: 0px 0px 20px aqua;
+}
+
+.mar {
+    margin-top: 10px;
+}
+
+.ava {
+    padding-bottom: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 10px aqua;
+}
+
+.links {
+    user-select: none;
+    padding: 25px 0px 0px 0px;
+}
+
+.name {
+    padding: 40px 0px 20px 0px;
+    height: 50%;
+    left: 50%;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: white;
+    user-select: none;
+    pointer-events: none;
+}
+
+.links a {
+    background-color: rgba(0, 0, 0, 0.081);
+    padding: 11px;
+    border-radius: 0.5em;
+    border: 1px solid aqua;
+    text-align: center;
+    display: inline-table;
+    margin: 0px 5px 0px 5px;
+
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.ff {
+    width: 150px;
+}
+
+.l {
+    padding: 20px 0px 70px 0px;
+    width: 80%;
+}
+
+.pp {
+    width: 89.5%;
+}
+
+.links a:hover {
+    text-shadow: -1px -1px 1px aqua;
+    box-shadow: inset 1px 1px 0px aqua, inset -1px -1px 0px aqua;
+    transition: all .1s;
+    color: aqua;
+}
+
+.links a:active {
+    color: white;
+}
+
+.glitch {
+    user-select: none;
+    pointer-events: none;
+}
+
+.heh {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: white;
+    pointer-events: none;
+    user-select: none;
+}
+
+.projects {
+    padding: 30px 0px 20px 0px;
+}
+
+.pr {
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+/*_____________ HappyNewYear ____________*/
+
+.santa {
+    position: absolute;
+    width: 34%;
+    
+    transform: translate(-208px, -282px) scaleX(-1) rotate(33deg);
+
+    z-index: 6;
+    user-select: none;
+    pointer-events: none;
+}
+
+#particles-js{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    overflow: hidden;
+  }
+
+/*____________ Media ____________*/
+
+@media screen and (max-device-width: 1080px) {
+    body {
+        background-repeat: repeat;
+        background-size: cover;
+        zoom: 75%;
+    }
+    .header {
+        width: 400px;
+        min-width: 400px;
+    }
+    .santa {
+        transform: translate(-197.6px, -282px) scaleX(-1) rotate(33deg);
+    }
+}
+
+@-moz-document url-prefix() {
+    body {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: unset;
+    }
+}
+
