@@ -1,15 +1,23 @@
+html {
+    min-width: 500px;
+}
+
 body {
-    background: url(pictures/back.gif) rgb(81, 109, 109);
-    margin: 0 auto;
+    background: rgb(35,35,35);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    height: 100%;
+    margin: 0;
+    user-select: none;
 }
 
 ::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
+
+/*__________ Preloader ____________*/
 
 .preloader {
     display: flex;
@@ -31,7 +39,7 @@ body {
     width: 60px;
     height: 60px;
     border: 6px solid transparent;
-    border-top: 6px solid #1df0ff;
+    border-top: 6px solid #8b0035;
     border-radius: 100%;
     -webkit-animation: preloader .5s linear infinite;
     animation: preloader .5s linear infinite;
@@ -43,7 +51,7 @@ body {
         transform: rotate(360deg);
     }
 }
-  
+
 @keyframes preloader {
     100% {
         -webkit-transform: rotate(360deg);
@@ -56,169 +64,132 @@ body {
     opacity: 0;
 }
 
-.header {
-    width: 420px;
-    min-width: 420px;
+
+/*___________ main _____________*/
+
+.sections {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     position: absolute;
     transform: translateX(-50%) translateY(-50%);
     top: 50%;
     left: 50%;
-    z-index: 6;
+}
+
+.section {
+    width: 600px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2px auto;
+    color: white;
     
-    border: 3px solid aqua;
-    border-radius: 2em;
-    backdrop-filter: blur(5px);
-    box-shadow: 0px 0px 30px aqua;
+    border: 2px solid rgba(0, 0, 0, 0.432);
+    border-radius: .5em;
+    backdrop-filter: blur(15px);
+    transition: all .2s;
 }
 
-.img {
-    width: 10em;
-    height: 10em;
-    border-radius: 5.6em;
-    border: aqua solid 2px;
-    user-select: none;
-    pointer-events: none;
-    box-shadow: 0px 0px 20px aqua;
+.section:first-child:hover {
+    border-color: rgb(100, 100, 100);
+    background-color: #52525213;
+    cursor: pointer;
 }
 
-.mar {
-    margin-top: 10px;
+.section:first-child:active {
+    background-color: #99999913;
+}
+
+.about {
+    height: 0px;
+    opacity: 0;
+    transition: .7s ease-out;
+}
+
+.about * {
+    transition: .5s ease-out;
+    margin: 0 auto;
+}
+
+.about_in, .about_in * {
+    animation: about_in .7s ease-out forwards;
+    opacity: 1;
+}
+
+.about_out, .about_out * {
+    animation: about_out .7s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes about_in {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 200px;
+    }
+}
+
+@keyframes about_out {
+    from {
+        height: 200px;
+    }
+    to {
+        height: 0px;
+    }
 }
 
 .ava {
-    padding-bottom: 30px;
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+}
+
+.ava img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
 }
 
 .link {
+    width: 150px;
     text-decoration: none;
     color: white;
     font-size: 24px;
     font-weight: 600;
     font-family: sans-serif;
-    box-shadow: 0px 0px 10px aqua;
 }
 
 .links {
     user-select: none;
-    padding: 25px 0px 0px 0px;
-}
-
-.name {
-    padding: 40px 0px 20px 0px;
-    height: 50%;
-    left: 50%;
-    font-size: 16px;
-    font-family: sans-serif;
-    color: white;
-    user-select: none;
-    pointer-events: none;
+    padding: 25px 0px ;
 }
 
 .links a {
     background-color: rgba(0, 0, 0, 0.081);
     padding: 11px;
     border-radius: 0.5em;
-    border: 1px solid aqua;
+    border: 1px solid rgba(0, 0, 0, 0.432);
     text-align: center;
     display: inline-table;
-    margin: 0px 5px 0px 5px;
+    margin: 5px 5px;
 
-    -webkit-transition: all .2s ease-out;
-    -moz-transition: all .2s ease-out;
-    -o-transition: all .2s ease-out;
-    -ms-transition: all .2s ease-out;
-    transition: all .2s ease-out;
-}
-
-.ff {
-    width: 150px;
-}
-
-.l {
-    padding: 20px 0px 70px 0px;
-    width: 80%;
-}
-
-.pp {
-    width: 89.5%;
+    transition: all .3s;
 }
 
 .links a:hover {
-    text-shadow: -1px -1px 1px aqua;
-    box-shadow: inset 1px 1px 0px aqua, inset -1px -1px 0px aqua;
-    transition: all .1s;
-    color: aqua;
+    border-color: white;
 }
 
 .links a:active {
     color: white;
 }
 
-.glitch {
-    user-select: none;
-    pointer-events: none;
-}
-
-.heh {
-    font-family: sans-serif;
-    font-size: 30px;
-    color: white;
-    pointer-events: none;
-    user-select: none;
-}
-
-.projects {
-    padding: 30px 0px 20px 0px;
-}
-
-.pr {
-    padding-bottom: 10px;
-    font-size: 20px;
-}
-
-/*_____________ HappyNewYear ____________*/
-
-.santa {
-    position: absolute;
-    width: 34%;
-    
-    transform: translate(-208px, -282px) scaleX(-1) rotate(33deg);
-
-    z-index: 6;
-    user-select: none;
-    pointer-events: none;
-}
-
-#particles-js{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 5;
-    overflow: hidden;
-  }
 
 /*____________ Media ____________*/
-
-@media screen and (max-device-width: 1080px) {
-    body {
-        background-repeat: repeat;
-        background-size: cover;
-        zoom: 75%;
-    }
-    .header {
-        width: 400px;
-        min-width: 400px;
-    }
-    .santa {
-        transform: translate(-197.6px, -282px) scaleX(-1) rotate(33deg);
-    }
-}
 
 @-moz-document url-prefix() {
     body {
@@ -228,3 +199,19 @@ body {
     }
 }
 
+@media screen and (max-width: 700px) {
+    .section {
+        width: 400px;
+    }
+    .link {
+        width: 91%;
+    }
+}
+
+@media screen and (max-device-width: 1080px) {
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+        zoom: 75%;
+    }
+}
