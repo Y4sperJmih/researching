@@ -1,5 +1,5 @@
 body {
-    background: rgb(35,35,35);
+    background: rgb(35,35,35) url("pictures/back1.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -68,7 +68,7 @@ body {
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-60%);
     top: 50%;
     left: 50%;
 }
@@ -82,11 +82,16 @@ body {
     flex-direction: column;
     margin: 2px auto;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
     
     border: 2px solid rgba(0, 0, 0, 0.432);
     border-radius: .5em;
     backdrop-filter: blur(15px);
     transition: all .2s;
+}
+
+.section:first-child {
+    z-index: 1488;
 }
 
 .section:first-child:hover {
@@ -102,21 +107,21 @@ body {
 .about {
     height: 0px;
     opacity: 0;
-    transition: .7s ease-out;
+    transition: .4s ease-out;
 }
 
 .about * {
-    transition: .5s ease-out;
-    margin: 0 auto;
+    transition: .2s ease-out;
+    margin: 10px;
 }
 
 .about_in, .about_in * {
-    animation: about_in .7s ease-out forwards;
+    animation: about_in .4s ease-out forwards;
     opacity: 1;
 }
 
 .about_out, .about_out * {
-    animation: about_out .7s ease-out forwards;
+    animation: about_out .4s ease-out forwards;
     opacity: 0;
 }
 
@@ -125,13 +130,13 @@ body {
         height: 0px;
     }
     to {
-        height: 200px;
+        height: 300px;
     }
 }
 
 @keyframes about_out {
     from {
-        height: 200px;
+        height: 300px;
     }
     to {
         height: 0px;
@@ -151,7 +156,7 @@ body {
 }
 
 .link {
-    width: 150px;
+    width: 25%;
     text-decoration: none;
     color: white;
     font-size: 24px;
@@ -167,13 +172,17 @@ body {
 .links a {
     background-color: rgba(0, 0, 0, 0.081);
     padding: 11px;
-    border-radius: 0.5em;
+    border-radius: .3em;
     border: 1px solid rgba(0, 0, 0, 0.432);
     text-align: center;
     display: inline-table;
-    margin: 5px 5px;
+    margin: 5px 7px;
 
     transition: all .3s;
+}
+
+.links a:last-child {
+    width: 91.8%;
 }
 
 .links a:hover {
@@ -200,7 +209,27 @@ body {
         width: 400px;
     }
     .link {
-        width: 91%;
+        width: 90.5%;
+    }
+    .links a:last-child {
+        width: 90.5%;
+    }
+    @keyframes about_in {
+        from {
+            height: 0px;
+        }
+        to {
+            height: 200px;
+        }
+    }
+    
+    @keyframes about_out {
+        from {
+            height: 200px;
+        }
+        to {
+            height: 0px;
+        }
     }
 }
 
