@@ -13,3 +13,5 @@ section.addEventListener("click", () => {
         video.pause()
     }
 })
+
+video.volume = 0.3;
