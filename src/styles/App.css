@@ -1,0 +1,43 @@
+@import url('http://fonts.cdnfonts.com/css/zirconian');
+@import url('http://fonts.cdnfonts.com/css/vtks-kravadin');
+@import url('http://fonts.cdnfonts.com/css/neo-tech');
+::-webkit-scrollbar {width: 0}
+
+.body {
+    background: url("../videos/background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+.App {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    backdrop-filter: blur(10px);
+}
+
+.info {
+    margin: 20% auto;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+}
+
+.yasper {
+    font-size: 100px;
+    color: white;
+    font-family: 'Neo Tech';
+    margin: 0px 0px 40px;
+    
+    text-shadow: 5px 3px 10px rgb(54, 54, 54);
+}
